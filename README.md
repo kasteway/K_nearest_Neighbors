@@ -1,4 +1,5 @@
 # K_Nearest_Neighbors
+## from sklearn.neighbors import KNeighborsClassifier
 
 
 ### Summary:
@@ -80,8 +81,29 @@ The data set used for this analysis comes from [UC Irvine Machine Learning Repos
 - Sensitivity to Imbalanced Data: In classification tasks, if one class is significantly more frequent than others, k-NN can be biased towards this majority class.
 - K should be odd: Difficulty in Choosing the Right 'k' use grid research
 - 
-- 
+- knn_model = KNeighborsClassifier(n_neighbors=1)
 
 
 
+---
+### Tips:
+
+- knn_model = KNeighborsClassifier(n_neighbors=1)
+
+test_error_rates = []
+
+for k in range(1,30):
+    knn_model = KNeighborsClassifier(n_neighbors=k)
+    knn_model.fit(scaled_X_train,y_train) 
+   
+    y_pred_test = knn_model.predict(scaled_X_test)
+    
+    test_error = 1 - accuracy_score(y_test,y_pred_test)
+    test_error_rates.append(test_error)
+
+plt.figure(figsize=(10,6),dpi=200)
+plt.plot(range(1,30),test_error_rates,label='Test Error')
+plt.legend()
+plt.ylabel('Error Rate')
+plt.xlabel("K Value")
 ---
