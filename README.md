@@ -1,4 +1,4 @@
-# K_nearest_Neighbors
+# K_Nearest_Neighbors
 
 
 ### Summary:
@@ -48,6 +48,40 @@ In summary, while k-NN is valued for its simplicity, lack of a training phase, a
 - Difficulty in Choosing the Right 'k': Selecting the optimal number of neighbors (k) is crucial and can be challenging. A value too small can be noisy and subject to the effects of outliers, while a value too large may smooth over the data's actual structure.
 
 - Boundary Problem: In areas where the class boundary is not well-defined, the algorithm might struggle to make accurate predictions.
+
+
+---
+---
+
+### Data:
+
+The data set used for this analysis comes from [UC Irvine Machine Learning Repository](https://archive.ics.uci.edu/dataset/73/mushroom). This data set includes descriptions of hypothetical samples corresponding to 23 species of gilled mushrooms in the Agaricus and Lepiota Family (pp. 500-525).  Each species is identified as definitely edible, definitely poisonous, or of unknown edibility and not recommended.  This latter class was combined with the poisonous one.  The Guide clearly states that there is no simple rule for determining the edibility of a mushroom; no rule like ``leaflets three, let it be'' for Poisonous Oak and Ivy.
+
+- Dataset Characteristics -> Multivariate
+
+- Subject Area -> Biology
+
+- Associated Tasks -> Classification
+
+- Feature Type -> Categorical
+
+- Instances -> 8124
+
+- Features -> 22
+
+
+
+---
+
+### Tips:
+
+- No Model training as it uses entire data set to learn
+- Feature Scaling Required: k-NN is sensitive to the scale of the data therefore is always good to scale
+- Sensitivity to Imbalanced Data: In classification tasks, if one class is significantly more frequent than others, k-NN can be biased towards this majority class.
+- K should be odd: Difficulty in Choosing the Right 'k' use grid research
+- 
+- 
+
 
 
 ---
