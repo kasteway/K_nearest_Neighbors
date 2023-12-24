@@ -104,9 +104,13 @@ for k in range(1,30):
 
 
 plt.figure(figsize=(10,6),dpi=200)
+
 plt.plot(range(1,30),test_error_rates,label='Test Error')
+
 plt.legend()
+
 plt.ylabel('Error Rate')
+
 plt.xlabel("K Value")
 
 ---
