@@ -114,6 +114,7 @@ plt.ylabel('Error Rate')
 plt.xlabel("K Value")
 
 
-(Error Rate.png) 
+<img width="997" alt="Error Rate" src="https://github.com/kasteway/K_nearest_Neighbors/assets/62068733/4506b020-9792-4ef5-9095-3022fa8a3b1c">
+
 
 ---
