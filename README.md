@@ -114,6 +114,6 @@ plt.ylabel('Error Rate')
 plt.xlabel("K Value")
 
 
-![alt text](Error Rate.png) 
+(Error Rate.png) 
 
 ---
