@@ -86,13 +86,14 @@ The data set used for this analysis comes from [UC Irvine Machine Learning Repos
 
 
 ---
-### Tips:
+### Model:
 
-- knn_model = KNeighborsClassifier(n_neighbors=1)
+knn_model = KNeighborsClassifier(n_neighbors=1)
 
 test_error_rates = []
 
 for k in range(1,30):
+
     knn_model = KNeighborsClassifier(n_neighbors=k)
     knn_model.fit(scaled_X_train,y_train) 
    
@@ -101,9 +102,11 @@ for k in range(1,30):
     test_error = 1 - accuracy_score(y_test,y_pred_test)
     test_error_rates.append(test_error)
 
+
 plt.figure(figsize=(10,6),dpi=200)
 plt.plot(range(1,30),test_error_rates,label='Test Error')
 plt.legend()
 plt.ylabel('Error Rate')
 plt.xlabel("K Value")
+
 ---
